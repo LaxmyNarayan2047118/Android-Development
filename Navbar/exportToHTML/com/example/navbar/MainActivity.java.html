@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.navbar</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.core.view.GravityCompat</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.drawerlayout.widget.DrawerLayout</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">android.app.Activity</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.app.AlertDialog</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.content.DialogInterface</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.content.Intent</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.View</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.Toast</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+
+    <span class="s1">DrawerLayout drawerLayout</span><span class="s0">;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span><span class="s0">;</span>
+        <span class="s1">drawerLayout = findViewById(R.id.drawer_layout)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+    <span class="s0">public void </span><span class="s1">ClickMenu(View view)</span>
+    <span class="s1">{</span>
+        <span class="s1">openDrawer(drawerLayout)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">openDrawer(DrawerLayout drawerLayout)</span>
+    <span class="s1">{</span>
+        <span class="s1">drawerLayout.openDrawer(GravityCompat.START)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">ClickLogo(View view)</span>
+    <span class="s1">{</span>
+        <span class="s1">closeDrawer(drawerLayout)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">closeDrawer(DrawerLayout drawerLayout)</span>
+    <span class="s1">{</span>
+        <span class="s0">if</span><span class="s1">(drawerLayout.isDrawerOpen(GravityCompat.START))</span>
+        <span class="s1">{</span>
+            <span class="s1">drawerLayout.closeDrawer(GravityCompat.START)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">ClickHome(View view) { redirectActvity(</span><span class="s0">this,</span><span class="s1">MainActivity.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">; </span><span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">ClickAttendance(View view)</span>
+    <span class="s1">{</span>
+
+    <span class="s1">}</span>
+
+
+    <span class="s0">public void </span><span class="s1">ClickPark(View view)</span>
+    <span class="s1">{</span>
+        <span class="s1">Intent launchIntent = getPackageManager().getLaunchIntentForPackage(</span><span class="s2">&quot;com.example.carpark&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(launchIntent != </span><span class="s0">null</span><span class="s1">) {</span>
+            <span class="s1">startActivity(launchIntent)</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+            <span class="s1">Toast.makeText(MainActivity.</span><span class="s0">this, </span><span class="s2">&quot;There is no package available in android&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_LONG).show()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">ClickRent(View view)</span>
+    <span class="s1">{</span>
+        <span class="s1">Intent launchIntent = getPackageManager().getLaunchIntentForPackage(</span><span class="s2">&quot;com.example.carrent&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(launchIntent != </span><span class="s0">null</span><span class="s1">) {</span>
+            <span class="s1">startActivity(launchIntent)</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+            <span class="s1">Toast.makeText(MainActivity.</span><span class="s0">this, </span><span class="s2">&quot;There is no package available in android&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_LONG).show()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+
+    <span class="s0">public void </span><span class="s1">ClickLogout(View view)</span>
+    <span class="s1">{</span>
+        <span class="s1">logout(MainActivity.</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">logout(Activity activity)</span>
+    <span class="s1">{</span>
+        <span class="s1">AlertDialog.Builder builder = </span><span class="s0">new </span><span class="s1">AlertDialog.Builder(activity)</span><span class="s0">;</span>
+        <span class="s1">builder.setTitle(</span><span class="s2">&quot;Logout&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">builder.setMessage(</span><span class="s2">&quot;Are you sure you want to logout ?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">builder.setPositiveButton(</span><span class="s2">&quot;Yes&quot;</span><span class="s0">, new </span><span class="s1">DialogInterface.OnClickListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">onClick(DialogInterface dialogInterface</span><span class="s0">, int </span><span class="s1">i) {</span>
+                <span class="s1">activity.finishAffinity()</span><span class="s0">;</span>
+                <span class="s1">System.exit(</span><span class="s3">0</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+        <span class="s1">builder.setNegativeButton(</span><span class="s2">&quot;No&quot;</span><span class="s0">, new </span><span class="s1">DialogInterface.OnClickListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">onClick(DialogInterface dialogInterface</span><span class="s0">, int </span><span class="s1">i) {</span>
+                <span class="s1">dialogInterface.dismiss()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+        <span class="s1">builder.show()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">redirectActvity(Activity activity</span><span class="s0">, </span><span class="s1">Class aclass)</span>
+    <span class="s1">{</span>
+        <span class="s1">Intent intent = </span><span class="s0">new </span><span class="s1">Intent(activity</span><span class="s0">,</span><span class="s1">aclass)</span><span class="s0">;</span>
+        <span class="s1">intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)</span><span class="s0">;</span>
+        <span class="s1">activity.startActivity(intent)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onPause() {</span>
+        <span class="s0">super</span><span class="s1">.onPause()</span><span class="s0">;</span>
+        <span class="s1">closeDrawer(drawerLayout)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span></pre>
+</body>
+</html>
