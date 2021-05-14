@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:text="hello, we are LN Groceries your ordered has been recieved and we will be delivering it to you soon. Our delivery agent has picked your items and will reach you soon. Kindly wait for the same.. have a nice day" />
+</LinearLayout>
