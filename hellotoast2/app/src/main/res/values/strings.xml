@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">hello toast</string>
+    <string name="button_label_toast" translatable="false">TOAST</string>
+    <string name="count_initial_value" translatable="false">0</string>
+    <string name="button_label_count" translatable="false">COUNT</string>
+    <string name="toast_button_toast" translatable="false">Hello Toast</string>
+</resources>
