@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="hbtnnext" type="id" />
+    <item name="hbtnprev" type="id" />
+    <item name="hbtnpause" type="id" />
+    <item name="txtnp" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="drawer_layout" type="id" />
+    <item name="nav_view" type="id" />
+    <item name="listviewsongs" type="id" />
+    <item name="btnradio" type="id" />
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BingeMusix</string>
+    <string name="song_name">Song Name</string>
+    <string name="todo">TODO</string>
+    <string name="_0_10">0:10</string>
+    <string name="_4_10">4:10</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_contact" />
+    <string name="settings" />
+</resources>
