@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".sell"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:textColor="#292828"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COURSE"
+        android:textSize="28sp"
+        android:padding="20dp"
+        android:textColor="#292828"
+        />
+
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:id="@+id/course"
+        android:textColor="#292828"
+        android:textSize="23sp"
+
+
+        >
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ug"
+            android:text="UG"
+            android:textColor="#292828"
+
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PG"
+            android:text="PG"
+            android:textColor="#292828"
+
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Phd"
+            android:text="PHD"
+            android:textColor="#292828"
+
+            />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_gravity="left"
+        android:paddingLeft="10dp"
+        android:text=" Category"
+        android:textColor="#292828"
+        android:textSize="28sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="235dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:textColor="#292828"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cod"
+        android:padding="10dp"
+        android:text="COD"
+        android:textColor="#292828"
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/epay"
+        android:text="E-pay"
+        android:padding="10dp"
+        android:textColor="#292828"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="20dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:padding="20dp"
+            android:text="Sell"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:padding="10dp"
+        android:text="Log Out"
+        android:textColor="@color/white" />
+
+</LinearLayout>
