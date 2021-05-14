@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>popupmenu.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+popupmenu.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.menu</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">android.annotation.SuppressLint</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.MenuItem</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.Button</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.Toast</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">androidx.appcompat.widget.PopupMenu</span><span class="s0">;</span>
+
+<span class="s0">import static </span><span class="s1">com.example.menu.R.id</span><span class="s0">;</span>
+<span class="s0">import static </span><span class="s1">com.example.menu.R.layout</span><span class="s0">;</span>
+<span class="s0">import static </span><span class="s1">com.example.menu.R.menu</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">popupmenu </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s0">implements </span><span class="s1">PopupMenu.OnMenuItemClickListener {</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(layout.activity_popupmenu)</span><span class="s0">;</span>
+        <span class="s1">Button b3 = (Button) findViewById(id.b3)</span><span class="s0">;</span>
+        <span class="s1">b3.setOnClickListener(v -&gt; {</span>
+            <span class="s1">PopupMenu popup = </span><span class="s0">new </span><span class="s1">PopupMenu(popupmenu.</span><span class="s0">this, </span><span class="s1">v)</span><span class="s0">;</span>
+            <span class="s1">popup.setOnMenuItemClickListener(popupmenu.</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">popup.inflate(menu.main)</span><span class="s0">;</span>
+            <span class="s1">popup.show()</span><span class="s0">;</span>
+        <span class="s1">})</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@SuppressLint(</span><span class="s2">&quot;NonConstantResourceId&quot;</span><span class="s1">)</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public boolean </span><span class="s1">onMenuItemClick(MenuItem item) {</span>
+        <span class="s1">Toast.makeText(</span><span class="s0">this, </span><span class="s2">&quot;Selected Item: &quot; </span><span class="s1">+item.getTitle()</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT).show()</span><span class="s0">;</span>
+        <span class="s0">switch </span><span class="s1">(item.getItemId()) {</span>
+            <span class="s0">case </span><span class="s1">id.search_item:</span>
+            <span class="s0">case </span><span class="s1">id.upload_item:</span>
+            <span class="s0">case </span><span class="s1">id.copy_item:</span>
+            <span class="s0">case </span><span class="s1">id.print_item:</span>
+            <span class="s0">case </span><span class="s1">id.share_item:</span>
+            <span class="s0">case </span><span class="s1">id.bookmark_item:</span>
+                <span class="s3">// do your code</span>
+                <span class="s0">return true;</span>
+            <span class="s0">default</span><span class="s1">:</span>
+                <span class="s0">return false;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
