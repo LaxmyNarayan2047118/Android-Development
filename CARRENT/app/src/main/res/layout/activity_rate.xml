@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Rate"
+    android:orientation="vertical"
+    android:background="@drawable/copy"
+    android:gravity="center">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="409dp"
+        android:layout_height="359dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Rate Your Experience"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+
+        />
+
+    <RatingBar
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rated"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:textColor="@color/purple_700"
+        android:background="@color/white"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Rate"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/ex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
+            android:text="Exit"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
